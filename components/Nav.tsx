@@ -12,10 +12,10 @@ const links = [
 
 export function Nav() {
   return (
-    <header className="border-b border-slate-200/20 bg-white/70 backdrop-blur dark:bg-slate-950/70">
-      <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
+    <header className="w-full border-b border-slate-200/20 bg-white/70 backdrop-blur dark:bg-slate-950/70">
+      <div className="mx-auto flex max-w-5xl items-center px-6 py-4">
         <Link href="/" className="font-semibold">FinOps Hub</Link>
-        <nav className="flex gap-5 text-sm">
+        <nav className="ml-auto flex space-x-5 text-sm">
           {links.map(l => (
             <Link key={l.href} href={l.href} className="hover:text-brand dark:hover:text-brand">
               {l.label}
