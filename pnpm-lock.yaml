@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@next/mdx':
+        specifier: ^14.2.5
+        version: 14.2.32
       next:
         specifier: ^14.2.5
         version: 14.2.32(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -18,9 +21,6 @@ importers:
         specifier: ^18.3.1
         version: 18.3.1(react@18.3.1)
     devDependencies:
-      '@next/mdx':
-        specifier: ^14.2.5
-        version: 14.2.32
       '@types/node':
         specifier: ^20.12.12
         version: 20.19.11
