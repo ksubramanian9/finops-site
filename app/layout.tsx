@@ -14,7 +14,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body className="min-h-screen bg-white text-slate-900 dark:bg-slate-950 dark:text-slate-100">
         {/* Basic SEO */}
-        {/* @ts-expect-error Server Component */}
         <DefaultSeo
           titleTemplate="%s | FinOps Hub"
           openGraph={{ type: 'website', site_name: 'FinOps Hub' }}

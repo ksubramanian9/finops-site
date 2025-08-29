@@ -5,10 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export",
+    "build": "next build",
     "start": "next start",
-    "lint": "echo 'no lint configured'",
-    "preview": "npx serve -s out"
+    "lint": "echo 'no lint configured'"
   },
   "dependencies": {
     "next": "^14.2.5",
