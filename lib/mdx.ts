@@ -1,10 +1,18 @@
 import fs from 'fs'
 import path from 'path'
+import { compileMDX } from 'next-mdx-remote/rsc'
+import { useMDXComponents } from '../mdx-components'
 
 export async function getMdxContent(section: string, slug: string) {
   const file = path.join(process.cwd(), 'content', section, `${slug}.mdx`)
   try {
-    return await fs.promises.readFile(file, 'utf8')
+    const source = await fs.promises.readFile(file, 'utf8')
+    const { content } = await compileMDX({
+      source,
+      components: useMDXComponents({}),
+      options: { parseFrontmatter: false },
+    })
+    return content
   } catch {
     return `Content not found: ${section}/${slug}`
   }
