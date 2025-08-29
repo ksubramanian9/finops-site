@@ -16,6 +16,7 @@ export function Nav() {
       <div className="mx-auto flex max-w-5xl items-center px-6 py-4">
         <Link href="/" className="font-semibold">FinOps Hub</Link>
         <nav className="ml-auto flex space-x-5 text-sm">
+
           {links.map(l => (
             <Link key={l.href} href={l.href} className="hover:text-brand dark:hover:text-brand">
               {l.label}
