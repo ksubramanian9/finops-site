@@ -11,7 +11,7 @@ A hybrid **educational + consulting** FinOps website. Built with **Next.js (App 
    pnpm dev
    ```
 3. **Set your project page**
-   - In `next.config.ts`, leave `isProjectPage = true` (so basePath = `/finops-site`).
+   - In `next.config.mjs`, leave `isProjectPage = true` (so basePath = `/finops-site`).
    - If you deploy to `username.github.io` root, set `isProjectPage = false`.
 4. **Deploy**: push to `main`. GitHub Action builds and publishes to Pages automatically.
 
@@ -29,8 +29,19 @@ A hybrid **educational + consulting** FinOps website. Built with **Next.js (App 
 - `next-seo` is pre-wired for basics.
 
 ## Notes for GitHub Pages
-- `output: 'export'` and `images.unoptimized: true` are set.
+- `images.unoptimized: true` is set.
 - `trailingSlash: true` avoids deep-link 404s.
+
+## Docker
+
+Build and run the site in a container:
+
+```bash
+docker build -t finops-site .
+docker run -p 3000:3000 finops-site
+```
+
+Then open <http://localhost:3000> in your browser.
 
 ## Customize
 - Colors in `tailwind.config.ts` (`brand`).
