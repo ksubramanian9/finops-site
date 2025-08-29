@@ -13,8 +13,13 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "plugins": [{ "name": "next" }]
+    "plugins": [{ "name": "next" }],
+    "baseUrl": ".",
+    "paths": {
+      "@/components/*": ["components/*"],
+      "@/lib/*": ["lib/*"]
+    }
   },
-  "include": ["app", "mdx-components.tsx", "next-env.d.ts"],
+  "include": ["app", "components", "lib", "mdx-components.tsx", "next-env.d.ts"],
   "exclude": ["node_modules"]
 }

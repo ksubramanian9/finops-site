@@ -1,6 +1,6 @@
 import Link from 'next/link'
-import CTA from '../components/CTA'
-import { Metric } from '../components/Metric'
+import CTA from '@/components/CTA'
+import { Metric } from '@/components/Metric'
 
 export default function HomePage() {
   return (
