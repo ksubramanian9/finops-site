@@ -1,10 +1,7 @@
-const terms = [
-  { term: 'Showback', def: 'Reporting costs back to teams without charge.' },
-  { term: 'Chargeback', def: 'Charging teams for their usage.' },
-  { term: 'Savings Plan / RI', def: 'Commitment-based discounts for steady usage.' },
-]
+import { getGlossaryEntries } from '@/lib/mdx'
 
-export default function Glossary() {
+export default async function Glossary() {
+  const terms = await getGlossaryEntries()
   return (
     <div>
       <h1 className="text-2xl font-semibold">Glossary</h1>
