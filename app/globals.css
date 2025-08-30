@@ -5,3 +5,18 @@
 :root { color-scheme: light dark; }
 html { scroll-behavior: smooth; }
 .prose h2 { scroll-margin-top: 6rem; }
+
+.nav-link {
+  @apply relative transition-all duration-200;
+}
+.nav-link::after {
+  content: '';
+  @apply absolute left-1/2 -bottom-[5px] h-[3px] w-0 -translate-x-1/2 bg-green-500 transition-all duration-300;
+}
+.nav-link:hover::after {
+  @apply w-full;
+}
+
+.content-section {
+  @apply min-h-[calc(100vh-80px)] pt-20;
+}

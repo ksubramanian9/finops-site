@@ -1,5 +1,6 @@
 import './globals.css'
 import type { Metadata } from 'next'
+import { Inter } from 'next/font/google'
 import { Nav } from '@/components/Nav'
 import { Footer } from '@/components/Footer'
 
@@ -12,13 +13,14 @@ export const metadata: Metadata = {
   },
 }
 
+const inter = Inter({ subsets: ['latin'], display: 'swap' })
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className="min-h-screen bg-white text-slate-900 dark:bg-slate-950 dark:text-slate-100">
-        {/* Basic SEO handled via Next.js metadata */}
+      <body className={`${inter.className} min-h-screen bg-slate-50 text-slate-800`}>
         <Nav />
-        <main className="mx-auto max-w-5xl px-6 py-10">{children}</main>
+        <main className="container mx-auto p-4 sm:p-6 md:p-10 mt-16">{children}</main>
         <Footer />
       </body>
     </html>
